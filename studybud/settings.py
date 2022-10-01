@@ -91,7 +91,14 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default" : env.dj_db_url("DATABASE_URL")
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'studybud',
+        'USER': 'studybud',
+        'PASSWORD': '@studybud#',
+        'HOST': '54.186.243.82',
+        'PORT': '',
+    }
 }
 
 
